@@ -1,0 +1,43 @@
+from django.urls import path,include
+from .views import*
+from django.conf import settings
+from django.conf.urls.static import static
+urlpatterns = [
+    path('',home,name="home"),
+    path('about',about,name="about"),
+    path('Contact',Contact,name="Contact"),
+    path('login',login,name="login"),
+    path('logcode',logcode,name="logcode"),
+    path('adminzone',adminzone,name="adminzone"),
+    path('logout',logout,name="logout"),
+    path('addsession',addsession,name="addsession"),
+    path('showsesssion',showsession,name="showsession"),
+    path('sessiondelete/<int:id>',sessiondelete,name="sessiondelete"),
+    path('addcourse',addcourse,name="addcourse"),
+    path('showcourse',showcourse,name="showcourse"),
+    path('deletecourse/<int:id>',deletecourse,name="deletecourse"),
+    path('editsession/<int:id>',editsession,name="editsession"),
+    path('editcourse/<int:id>',editcourse,name="editcourse"),
+    path('addstudent',addstudent,name="addstudent"),
+    path('showstudent',showstudent,name="showstudent"),
+    path('studentzone',studentzone,name="studentzone"),
+    path('studentlogout',studentlogout,name="studentlogout"),
+    path('updateprofile',updateprofile,name="updateprofile"),
+    path('updateprosave',updateprosave,name="updateprosave"),
+    path('document',document,name="document"),
+    path('feespayment',feespayment,name="feespayment"),
+    path('Approvedoc',Approvedoc,name="Approvedoc"),
+    path('verficationpanding',verficationpanding,name="verficationpanding"),
+    path('feessave',feessave,name="feessave"),
+    path('course_Alloted',course_Alloted,name="course_Alloted"),
+    path('paymentpanding',paymentpanding,name="paymentpanding"),
+    path('Enrolled Course',studenthome,name="studenthome"),
+    path('fees_approve',fees_approve,name="fees_approve"),
+    path('verfiyfeesstu',verfiyfeesstu,name="verfiyfeesstu"),
+    path('courses',courses,name='courses'),
+    path('adminhome',adminhome,name='adminhome'),
+    path('pendingfees',pendingfees,name='pendingfees'),
+    path('document_Verification',document_Verification,name="document_Verification"),
+    path('document_Verified',document_Verified,name="document_Verified"),
+
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
