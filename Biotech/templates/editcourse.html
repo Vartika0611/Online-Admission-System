@@ -1,0 +1,36 @@
+{% extends 'adminzone.html' %}
+{% block admin %}
+<div class=" mt-5 bg-primary" style="height: 50px; width: 200px; border:1px solid transparent; border-radius: 0px 30px 30px 0px;">
+    
+    <h4 class="" style="margin-top: 13px; margin-left: 10px; color:white;">Edit Course</h4>
+</div>
+   <div class="container mt-5">
+    <div class="row">
+  <form method="post">
+    {% csrf_token %}
+    <div class="row bg-light border p-4 shadow m-2">
+        <div class="col-sm-6">
+            <p>Session</p>
+            <input type="text" name="course_session" id="" value="{{ab.course_session}}"  class="form-control border-dark rounded-0">
+        </div>
+        <div class="col-sm-6">
+            <p>Enter Course Name</p>
+            <input type="text" name="course_name" id="" class="form-control border-dark rounded-0" value="{{ab.course_name}}">
+        </div>
+        <div class="col-sm-6 mt-3">
+            <p>Enter Course Durations</p>
+             <input type="text" name="course_duration" id=""  class="form-control border-dark rounded-0" value="{{ab.course_duration}}">
+        </div>
+        <div class="col-sm-6 mt-3">
+            <p>Enter Your fees</p>
+            <input type="text" name="course_fees" id="" class="form-control border-dark rounded-0" value="{{ab.course_fees}}">
+
+            
+        </div>
+        <div class="col-sm-12 mt-5">
+            <input type="submit" value="update" class="btn btn-primary w-100 rounded-0">
+        </div>
+    </div>
+  </form>
+   </div>
+{% endblock %}

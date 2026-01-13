@@ -1,0 +1,53 @@
+{% extends 'studentzone.html' %}
+
+{% block student %}
+<h1  style="text-align: center; margin-top: 30px; color:rgb(15, 106, 3);">Update Profile</h1>
+<div class="container mb-5">
+    <form action="{% url 'updateprosave' %}" method="post">
+        {% csrf_token %}
+        <div class="row border p-4 bg-white shadow">
+            <div class="col-sm-6">
+                <p>Name</p>
+                <input type="text" class="form-control border-dark rounded-0"  name="name"  value="{{sh.name}}"/>
+            </div>
+            <div class="col-sm-6">
+                <p>Gender</p>
+                <div class=" border border-dark p-2" style="background-color: white;">
+                    <input type="radio" name="gender" id="" value="male"> Male
+                    <input type="radio" name="gender" id="" value="female">Fmale
+                    <input type="radio" name="gender" id="" value="other">Other
+                </div>
+             
+            </div>
+       
+        <div class="col-sm-6 mt-3">
+            <p>Email Address</p>
+            <input type="text" class="form-control border-dark rounded-0"  name="email" value="{{sh.email}}" readonly/>
+        </div>
+        <div class="col-sm-6 mt-3">
+            <p>Mobile Number</p>
+            <input type="text" class="form-control border-dark rounded-0"  name="mobile" value="{{sh.mobile}}"/>
+        </div>
+        <div class="col-sm-12 mt-3">
+            <p>DOB</p>
+            <input type="date" class="form-control border-dark rounded-0"  name=""/>
+        </div>
+        <div class="col-sm-6 mt-3">
+            <p>Father Name</p>
+            <input type="text" class="form-control border-dark rounded-0"  name="fname"  value="{{sh.fname}}"/>
+        </div>
+        <div class="col-sm-6 mt-3">
+            <p>Mother Name</p>
+            <input type="text" class="form-control border-dark rounded-0"  name="mname" value="{{sh.mname}}"/>
+        </div>
+        <div class="col-sm-12 mt-3">
+            <p>Address</p>
+           <textarea name="address" id=""class="form-control border-dark rounded-0">{{sh.address}}</textarea>
+        </div>
+        <div class="col-sm-12 mt-3">
+          <input type="submit" class="btn w-100 rounded-0 text-white" style="background-color: rgb(0, 81, 195);">
+        </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

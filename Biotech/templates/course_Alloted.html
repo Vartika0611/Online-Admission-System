@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful & Course Allotted</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+        }
+        .container img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        .container h1 {
+            font-size: 26px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .container p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .course-details {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border: 1px solid #c8e6c9;
+            border-radius: 5px;
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://media.tenor.com/bm8Q6yAlsPsAAAAj/verified.gif" 
+             alt="Payment Successful">
+        <h1>Payment Successful!</h1>
+        <p>Your payment has been successfully processed. We are excited to inform you that your course has been allotted.</p>
+        <div class="course-details">
+            <p><strong>Course Name:</strong> {{sh.course}}</p>
+            <p><strong>Duration:</strong> {{sh.course_duration}}</p>
+            <p><strong>Course Fees:</strong> {{sh.course_fees}}</p>
+            <p><strong>Start Date:</strong> 1st December 2024</p>
+        </div>
+        <p>Thank you for choosing our platform! Click below to access your course dashboard and begin your journey.</p>
+        <a href="{% url 'studenthome' %}">
+            <button>Go to Dashboard</button>
+        </a>
+    </div>
+</body>
+</html>

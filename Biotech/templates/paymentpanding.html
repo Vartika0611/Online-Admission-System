@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Not Verified</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+        }
+        .container img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        .container h1 {
+            font-size: 26px;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        .container p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .payment-details {
+            background-color: #fff3cd;
+            padding: 15px;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            color: #856404;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://img.freepik.com/free-vector/error-concept-illustration_114360-1811.jpg" 
+             alt="Payment Not Verified">
+        <h1>Payment Not Verified</h1>
+        <p>Your payment is under review. Please wait for the admin to verify your payment before proceeding further.</p>
+        <div class="payment-details">
+            <p><strong>Name :</strong>{{sh.name}}</p>
+            <p><strong>Payment ID:</strong> GPay-9876543210XYZ</p>
+
+            <p><strong>Amount Paid:</strong>&nbsp;₹ {{sh.fees}} ₨</p>
+            <p><strong>Status:</strong> Pending Verification</p>
+        </div>
+        <p>If you have any questions, please contact support for further assistance.</p>
+        <a href="{% url 'studentzone' %}">
+            <button>Back To Home</button>
+        </a>
+    </div>
+</body>
+</html>

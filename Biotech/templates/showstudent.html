@@ -1,0 +1,56 @@
+{% extends 'adminzone.html' %}
+{% block admin %}
+<style>
+   
+    table.c {
+        table-layout: auto;
+        width: 100%;  
+      }
+
+    </style>
+<div class=" mt-5 bg-primary" style="height: 50px; width: 200px; border:1px solid transparent; border-radius: 0px 30px 30px 0px;">
+    
+    <h4 class="" style="margin-top: 13px; margin-left: 10px; color:white;">Show Students</h4>
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 mt-3 table-responsive">
+            <table class="table table-primary a" id="example">
+                <thead>
+                    <tr class="text-center">
+                        <th class="text-white bg-primary text-center">Srno</th>
+                        <th class="text-white bg-primary text-center">Name</th>
+                        <th class="text-white bg-primary text-center">Gender</th>
+                        <th class="text-white bg-primary text-center">Email</th>
+                        <th class="text-white bg-primary text-center">Mobile</th>
+                        <th class="text-white bg-primary text-center">Father's Name</th>
+                        <th class="text-white bg-primary text-center">Mother's Name</th>
+                        <th class="text-white bg-primary text-center">Address</th>
+                        <th class="text-white bg-primary text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for i in sh %}
+                  <tr class="text-center">
+                    <td>{{forloop.counter}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.gender}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.mobile}}</td>
+                    <td>{{i.fname}}</td>
+                    <td>{{i.mname}}</td>
+                    <td>{{i.address}}</td>
+                    <td>
+                        <span><a href=""><i class="fa-solid fa-trash" style="color: #e81717;"></i></a></span>&nbsp;&nbsp;
+                        <span><a href=""><i class="fa-solid fa-pen-to-square" style="color: #1fbd29;"></i></a></span>
+                    </td>
+                  </tr>
+                  {% endfor  %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

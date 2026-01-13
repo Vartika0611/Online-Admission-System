@@ -1,0 +1,117 @@
+{% extends 'layout.html' %}
+ {% block title %}
+Courses
+{% endblock %}
+{% block main %}
+<style>
+    body{
+        background-image: linear-gradient(to right,rgb(4, 89, 209),rgb(18, 121, 5));
+           
+    }
+    
+
+</style>
+<div class="container fluid">
+    <div class="row">
+        <h1 class="text-white m-5" style="font-family: Georgia, 'Times New Roman', Times, serif; text-shadow: 1px 1px 15px black;"><b><center>Courses Offered :</center></b></h1>
+        <hr style="color: white;">
+        <br>
+        <!-- future tech -->
+        <h3 class="mt-2 text-white" style="font-family: Georgia, 'Times New Roman', Times, serif;"><b><center>Our Futuristic Technologies :</center></b></h3>
+        <div class="card-group mt-3 ">
+            <div class="card m-4">
+              <img src="static/img/tra5.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Advanced Bioinformatics (ML in Drug Design)</h5>
+                <p class="card-text">Explores machine learning applications in drug design and virtual screening.</p>
+                <p class="card-text"><small class="text-muted">Last updated 12 hr ago</small></p>
+                
+              </div>
+            </div>
+            <div class="card m-4">
+              <img src="static/img/tra6.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Environmental Biotechnology</h5>
+                <p class="card-text">Focuses on bioremediation, biosorption, and wastewater treatment.</p>
+                <p class="card-text"><small class="text-muted">Last updated 23 hr ago</small></p>
+              </div>
+            </div>
+            <div class="card m-4">
+              <img src="static/img/tra3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Biodiesel Production and Testing</h5>
+                <p class="card-text">Includes trans-esterification and physicochemical property analysis of biodiesel.</p>
+                <p class="card-text"><small class="text-muted">Last updated 16 hr ago</small></p>
+                </div>
+              </div>
+            </div>
+            <!-- future tech ends -->
+            <!-- pupular tech -->
+            <div class="row mt-5">
+                <h3 class="text-white" style="font-family: Georgia, 'Times New Roman', Times, serif;"><b><center>Our Popular Technologies :</center></b></h3>
+                <div class="card-group mt-3">
+                    <div class="card m-4">
+                      <img src="static/img/tra1.jpeg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Molecular Biology</h5>
+                        <p class="card-text">Covers PCR, gel documentation, DNA fingerprinting, and plasmid extraction.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 days ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card m-4">
+                      <img src="static/img/tra2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Plant Tissue Culture</h5>
+                        <p class="card-text">Focus on micropropagation, conservation, and elite plant multiplication.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 6 days ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card m-4">
+                      <img src="static/img/tra3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Bioinformatics</h5>
+                        <p class="card-text">Explores sequence analysis, genome annotation, and molecular docking.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 15 days ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- popular tech ends -->
+                     <!-- trending tech -->
+                    <div class="row mt-5">
+                        <h3 class="text-white" style="font-family: Georgia, 'Times New Roman', Times, serif;"><b><center>Our Trending Technologies :</center></b></h3>
+                        <div class="card-group mt-3">
+                            <div class="card m-4">
+                              <img src="static/img/tra5.jpeg" class="card-img-top" alt="...">
+                              <div class="card-body m-4">
+                                <h5 class="card-title">Industrial Biotechnology</h5>
+                                <p class="card-text">Includes media optimization, bioreactors, and product purification techniques.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 1 month ago</small></p>
+                              </div>
+                            </div>
+                            <div class="card m-4">
+                              <img src="static/img/tra6.jpg" class="card-img-top" alt="...">
+                              <div class="card-body m-4">
+                                <h5 class="card-title">Biofertilizers and Biopesticides</h5>
+                                <p class="card-text">Focus on sustainable agricultural practices.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 1 month ago</small></p>
+                              </div>
+                            </div>
+                            <div class="card m-4">
+                              <img src="static/img/tra3.jpg" class="card-img-top" alt="...">
+                              <div class="card-body m-4">
+                                <h5 class="card-title">Extraction and Isolation of Bioactive Compounds</h5>
+                                <p class="card-text">Teaches extraction and bioactivity testing of phytocompounds.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 2 month ago</small></p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- trending tech ends -->
+            </div>
+          </div>
+          <br><br>
+</div>
+</div>
+
+
+
+{% endblock %}

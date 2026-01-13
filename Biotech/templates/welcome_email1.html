@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admission Successfully Completed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            max-width: 650px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        p {
+            color: #555;
+        }
+        .details {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: inline-block;
+            text-align: left;
+        }
+        .details p {
+            margin: 5px 0;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🎉 Congratulations, {{ name }}! 🎉</h2>
+        <p>We are delighted to inform you that your admission process has been successfully completed at Biotech Park Lucknow.</p>
+
+        <div class="details">
+            <p><strong>Course Name:</strong> {{ course_name }}</p>
+            <p><strong>Duration:</strong> {{ duration }}</p>
+            <p><strong>Start Date:</strong>Comming Soon</p>
+        </div>
+
+        <p>Welcome to the Biotech Park community! We look forward to your success and growth with us.</p>
+
+        <p>If you have any questions, feel free to contact our support team at <strong>7080102008</strong> or visit <a href="https://softproindia.in">softproindia.in</a>.</p>
+
+        <p>Best regards,<br>
+        Admissions Team<br>
+        Biotech Park Lucknow</p>
+
+        <div class="footer">
+            <p>This is an automated email. Please do not reply. For assistance, contact our support team.</p>
+        </div>
+    </div>
+</body>
+</html>

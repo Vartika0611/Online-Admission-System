@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Pending</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Nunito Sans", sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .container h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .container p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .container .info-box {
+            background-color: #fffbe6;
+            padding: 15px;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            color: #856404;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .container .wait-msg {
+            color: #6c757d;
+            font-size: 14px;
+        }
+        .container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.pinimg.com/originals/44/0b/9d/440b9dc08fefeff13ec30dc0ae6a09df.gif" alt="Pending">
+        <h1>Verification Pending</h1>
+        <div class="info-box">
+            Your documents have not been verified by the admin yet.
+        </div>
+        <p>Please wait. Once the admin verifies your documents, you will be able to proceed with the payment.</p>
+        <button disabled>Payment Disabled</button>
+        <p class="wait-msg">You will be notified via email or notification when verification is complete.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+{% extends 'studentzone.html' %}
+{% block student %}
+<h1 class="text-center mt-5">Document Verification</h1>
+
+<div class="container">
+    <div class="alert alert-primary">
+        Your Basic Information is Successfully Save
+    </div>
+    
+ <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row border p-4 mb-5 shadow rounded-2 bg-white">
+        <div class="col-sm-6">
+            <p>Enter Addar Number</p>
+            <input type="text" name="addharno" id="" class="form-control rounded-0 border-dark">
+        </div>
+        <div class="col-sm-6">
+            <p>Upload Addar Card</p>
+            <div class=" border border-dark p-2">
+                <input type="file" name="addharpic" id="">
+
+            </div>
+        </div>
+
+        <div class="col-sm-4 mt-3">
+            <p>Enter Session</p>
+           
+            <select   name="session" id="" class="form-control rounded-0 border-dark">
+                <option value="">--Select Your Session--</option>
+                {% for i in ab %}
+                <option value="{{i.session}}">{{i.session}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-4 mt-3">
+            <p>Enter Course</p>
+            
+            
+            <select   name="course" id="" class="form-control rounded-0 border-dark">
+                <option value="">--Select Your Course--</option>
+                {% for i in ba %}
+                <option value="{{i.course_name}}">{{i.course_name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-4 mt-3">
+            <p>Enter Course Duratrion</p>
+            
+            <select   name="course_duration" id="" class="form-control rounded-0 border-dark">
+                <option value="">--Select Your Course Duration--</option>
+                {% for i in ba %}
+                <option value="{{i.course_duration}}">{{i.course_duration}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-6 mt-3">
+            <p>Enter High School (%)</p>
+            <input type="text" name="hs_percent" id="" class="form-control rounded-0 border-dark">
+        </div>
+        <div class="col-sm-6 mt-3">
+            <p>Upload High School Marksheet</p>
+            <div class=" border border-dark p-2">
+                <input type="file" name="hs_marksheet" id="">
+
+            </div>
+        </div>
+
+        <div class="col-sm-6 mt-3">
+            <p>Enter Intermediate (%)</p>
+            <input type="text" name="inter_percent" id="" class="form-control rounded-0 border-dark">
+        </div>
+        <div class="col-sm-6 mt-3">
+            <p>Upload Intermediate Marksheet</p>
+            <div class=" border border-dark p-2">
+                <input type="file" name="inter_marksheet" id="">
+
+            </div>
+        </div>
+
+        <div class="col-sm-6 mt-3">
+            <p>Upload Profile</p>
+            <div class=" border border-dark p-2">
+                <input type="file" name="profile_pic" id="">
+
+            </div>
+        </div>
+        <div class="col-sm-6 mt-3">
+            <p>Upload Sign</p>
+            <div class=" border border-dark p-2">
+                <input type="file" name=" sing" id="">
+
+            </div>
+        </div>
+        <div class="col-sm-12 mt-4">
+            <input type="submit"  class="w-100 p-2 border-0" style="background-color: green; color:white;">
+        </div>
+
+        
+    </div>
+ </form>
+</div>
+
+{% endblock %}

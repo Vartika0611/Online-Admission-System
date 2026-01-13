@@ -1,0 +1,77 @@
+{% extends 'adminzone.html' %}
+{% block admin %}
+<div class="container">
+    <div class="row mt-4 mb-4">
+        <div class="col-sm-12 text-end">
+            <select style="height: 35px; width:200px;;">
+                <option>--Session--</option>
+            {% for i in da %}
+            <option>{{i.session}}</option>
+            {% endfor %}
+              
+            </select>
+        </div>
+    </div>
+    <div class="row mx-auto g-5">
+        <div class="col-sm-4">
+            <div class="card border-dark rounded-0 shadow-lg" style="width: 20rem;">
+                <div class="card-body text-center ">
+                    <span style="font-size: 50px; color: gray; " class="text-center"><i class="fa-solid fa-users"></i></span>
+                  <h3 class="card-title fw-bold mt-1" style="color: gray; font-size: 25px;">Total Students</h3>
+                  <h3 class="card-subtitle mb-2 mt-1">{{ab}}</h3>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card border-dark rounded-0 shadow-lg" style="width: 20rem;">
+                <div class="card-body text-center">
+                    <span style="font-size: 40px; color:gray; " class="text-center"><i class="fa-solid fa-comment"></i></span>
+                  <h3 class="card-title fw-bold mt-1" style="color: gray; font-size: 25px;">Total Enquiry</h3>
+                  <h3 class="card-subtitle mb-2 mt-1">{{ca}}</h3>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card border-dark rounded-0 shadow-lg" style="width: 20rem;">
+              <div class="card-body text-center">
+                  <span style="font-size: 40px; color:  gray; " class="text-center"><i class="fa-solid fa-check-to-slot"></i></span>
+                <h3 class="card-title fw-bold mt-1" style="color: gray; font-size: 25px;">Verified Fees</h3>
+                <h3 class="card-subtitle mb-2 mt-1">{{ab}}</h3>
+              </div>
+            </div>
+      </div>
+        
+        
+    </div>
+    <div class="row mt-2 mx-auto g-5">
+        <div class="col-sm-4">
+            <div class="card border-dark rounded-0 shadow-lg" style="width: 20rem;">
+                <div class="card-body text-center">
+                    <span style="font-size: 40px; color: gray; " class="text-center"><i class="fa-regular fa-clock"></i></span>
+                  <h3 class="card-title fw-bold mt-1" style="color: gray; font-size: 25px;">Pending Document</h3>
+                  <h3 class="card-subtitle mb-2 mt-1">1</h3>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card border-dark rounded-0 shadow-lg" style="width: 20rem;">
+                <div class="card-body text-center">
+                    <span style="font-size: 40px; color: gray " class="text-center"><i class="fa-solid fa-check-to-slot"></i></span>
+                  <h3 class="card-title fw-bold mt-1" style="color: gray; font-size: 25px;">Verified Document</h3>
+                  <h3 class="card-subtitle mb-2 mt-1 text-dark">{{ab}}</h3>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card border-dark rounded-0 shadow-lg" style="width: 20rem;">
+                <div class="card-body text-center">
+                    <span style="font-size: 40px; color: gray;" class="text-center"><i class="fa-regular fa-clock"></i></span>
+                  <h3 class="card-title fw-bold mt-1" style="color: gray; font-size: 25px;;">Pending Fees</h3>
+                  <h3 class="card-subtitle mb-2 mt-1" style="color: gray;">{{ab}}</h3>
+                </div>
+              </div>
+        </div>
+       
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'adminzone.html' %}
+{% block admin  %}
+<div class="container">
+    <div class="row">
+        <h2 class="text-center mt-4 mb-4">Pending Document Verification </h2>
+        <div class="col-sm-12 mt-3 table-responsive">
+            <table class="table table-primary" id="example">
+                <thead>
+                    <tr class="text-center">
+                        <th class="text-white bg-primary text-center">Srno</th>
+                        <th class="text-white bg-primary text-center">Name</th>
+                        <th class="text-white bg-primary text-center">Gender</th>
+                        <th class="text-white bg-primary text-center">Email</th>
+                        <th class="text-white bg-primary text-center">Mobile</th>
+                        <th class="text-white bg-primary text-center">Addhar No</th>
+                        <th class="text-white bg-primary text-center">High School Persent</th>
+                        <th class="text-white bg-primary text-center">High School Marksheet</th>
+                        <th class="text-white bg-primary text-center">Intermediate Persent</th>
+                        <th class="text-white bg-primary text-center">Intermediate Markseet</th>
+                        <th class="text-white bg-primary text-center">Profile_pic</th>
+                        <th class="text-white bg-primary text-center">Sign</th>
+                        <th class="text-white bg-primary text-center">Status</th>
+                        <th class="text-white bg-primary text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for i in sh %}
+                  <tr class="text-center">
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.gender}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.mobile}}</td>
+                    
+                    <td>
+                        {% if i.addhar_pic %}
+                        <a href="{{i.addharpic.url}}">Read More</a>
+                        {% else %}
+                        <p>No file</p>
+                           {% endif %}
+                        
+                    </td>
+                    
+                    <td>{{i.hs_percent}}</td>
+                    <td>
+                        {% if i.hs_marksheet %}
+                        <a href="{{i.hs_marksheet.url}}">Read More</a>
+                        {% else %}
+                        <p>No file</p>
+                           {% endif %}
+                    </td>
+                    <td>
+                      {{i.inter_percent}}
+                    </td>
+                    <td>
+                        {% if i.inter_marksheet %}
+                        <a href="{{i.inter_marksheet.url}}">Read More</a>
+                        {% else %}
+                        <p>No file</p>
+                           {% endif %}
+                        
+                    </td>
+                    
+                    <td>
+                        {% if i.profile_pic %}
+                        <a href="{{i.profile_pic.url}}">Read More</a>
+                        {% else %}
+                        <p>No file</p>
+                           {% endif %}
+                       
+                    </td>
+                    <td>
+                        {% if i.sing %}
+                        <a href="{{i.sing.url}}">Read More</a>
+                        {% else %}
+                        <p>No file</p>
+                           {% endif %}
+                        
+                    </td>
+                    <td>{{i.form_status}}</td>
+                    
+                    <td>
+                       
+                        <a href="{% url 'Approvedoc' %}" class="btn btn-success">Verify</a>
+                    </td>
+                   
+                  </tr>
+                  {% endfor  %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

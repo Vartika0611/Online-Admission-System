@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block main %}
+<div class="row">
+    <div class="col-sm-12" style="background-image:linear-gradient(rgba(0, 0, 0, 0.784),rgba(0, 0, 0, 0.663)), url('../static/img/study.jpg'); background-size: cover; height: 300px; background-position: center;">
+        <h1 class="text-light" style="margin-top: 100px; margin-left: 30px;">Login page</h1>
+        <p class="text-light" style="margin-left: 35px;"><a href="" style="text-decoration: none; color: white;">Home</a>&nbsp;&nbsp; / &nbsp;&nbsp;<a href="" style="text-decoration: none; color: white;">Login</a></p>
+    </div>
+</div>
+<div class="row">
+    <form action="{% url 'logcode' %}" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 border mt-5 mb-5 p-4 shadow">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <img src="{% static 'img/biologo.png' %}" style="height:150px ;" alt="">
+                    </div>
+                    <div class="col-sm-12">
+                        <p>Usertype</p>
+                        <select name="usertype" id="" class="form-control border-dark rounded-0">
+                            <option value="">--Select Your User Type--</option>
+                            <option value="admin">admin</option>
+                            <option value="student">Student</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-12 mt-3">
+                        <p>Username</p>
+                        <input type="email" name="userid" id="" class="form-control border-dark rounded-0" placeholder="eg:.example@gmail.com">
+                    </div>
+                    <div class="col-sm-12 mt-3">
+                        <p>Enter Password</p>
+                        <input type="password" name="password" id="" class="form-control border-dark rounded-0" placeholder="*************">
+                    </div>
+                    <div class="col-sm-12 mt-3">
+                        <input type="submit" class="w-100 p-2" style="background-color:#2596be; border:0px; color:white;">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </form>
+</div>
+{% endblock %}

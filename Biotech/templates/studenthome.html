@@ -1,0 +1,85 @@
+{% extends 'studentzone.html' %}
+{% block student %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            width: 600px;
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+        .card h1 {
+            font-size: 22px;
+            color: #007bff;
+            margin: 10px 0;
+        }
+        .card h2 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+        .card .highlight {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .card::before {
+            content: "🎉";
+            font-size: 40px;
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .footer {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card mt-5" style="margin-left: 300px;">
+                <h1>Congratulations!</h1>
+                <h2>Biotech Park Lucknow</h2>
+                <p>We are delighted to congratulate <span class="highlight">{{ sh.name }}</span> on successfully enrolling in:</p>
+                <p><span class="highlight">Course Name:</span> {{ sh.course }}</p>
+                <p><span class="highlight">Duration:</span> {{ sh.course_duration }}</p>
+                <p><span class="highlight">Fees:</span> ₹{{ sh.course_fees }}</p>
+                <p>We wish you all the best for this journey!</p>
+                <div class="footer">Thank you for choosing Biotech Park Lucknow.</div>
+            </div>
+        </div>
+    </div>
+   </div>
+</body>
+</html>
+
+{% endblock %}

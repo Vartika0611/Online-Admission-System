@@ -1,0 +1,49 @@
+{% extends 'adminzone.html' %}
+{% block admin  %}
+<div class="container">
+    <div class="row">
+        <h1 class="mt-5 text-center mb-5"> Fees Verification</h1>
+        <div class="col-sm-12 table-responsive">
+            <table class="table" id="example">
+                <thead>
+                    <tr class="text-center">
+                        <th style="background-color: rgb(83, 83, 225); color:white;">Srno</th>
+                        <th style="background-color: rgb(83, 83, 225); color:white;">Name</th>
+                        <th style="background-color: rgb(83, 83, 225); color:white;">Mobile</th>
+                        <th style="background-color: rgb(83, 83, 225); color:white;">Email</th>
+                        <th style="background-color: rgb(83, 83, 225); color:white;">Session</th>
+                        <th style="background-color: rgb(83, 83, 225); color:white;">Course</th>
+                        <th style="background-color: rgb(83, 83, 225); color:white;">Course_Duration</th>
+                        <th style="background-color: rgb(83, 83, 225); color:white;">Fees</th>
+                        <th style="background-color: rgb(83, 83, 225); color:white;">Status</th>
+                        <th style="background-color: rgb(83, 83, 225); color:white;">Payment Recipt</th>
+                        <th style="background-color: rgb(83, 83, 225); color:white;">Action</th>
+            
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in sh %}
+                    <tr class="text-center">
+                        <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.mobile}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.session}}</td>
+                    <td>{{i.course}}</td>
+                    <td>{{i.course_duration}}</td>
+                    <td>{{i.course_fees}}</td>
+                    <td>{{i.fees_status}}</td>
+                    <td>
+                        <a href="{{i.fees_sc.url}}">Read More</a>
+                    </td>
+                    <td><a href="{% url 'fees_approve' %}">
+                        <button class="btn btn-success">Verify</button>
+                    </a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

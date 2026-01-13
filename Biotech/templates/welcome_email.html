@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Biotech Park Lucknow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            max-width: 650px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        p {
+            color: #555;
+        }
+        ul {
+            color: #555;
+            padding-left: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Biotech Park Lucknow, {{ name }}!</h2>
+        <p>Dear {{ name }},</p>
+        <p>We are excited to welcome you to Biotech Park Lucknow. Follow the steps below to complete your admission process smoothly.</p>
+
+        <h3>Your Login Details:</h3>
+        <p>
+            <strong>Portal Link:</strong> <a href="http://localhost:8000/login">biotechpark.org.in</a><br>
+            <strong>Username:</strong> {{ emailaddress }}<br>
+            <strong>Password:</strong> {{ password }}
+        </p>
+
+        <h3>Steps to Follow:</h3>
+        <ol>
+            <li><strong>Login:</strong> Use the above credentials to log into the portal.</li>
+            <li><strong>Fill Out the Application Form:</strong> Complete the form with accurate details.</li>
+            <li><strong>Document Verification:</strong> Upload all required documents as per the guidelines provided.</li>
+            <li><strong>Pay Fees:</strong> Make the payment using the portal and save the payment receipt as a screenshot (SS).</li>
+            <li><strong>Upload Payment Screenshot:</strong> Submit the screenshot of your payment receipt on the portal.</li>
+            <li><strong>Admin Verification:</strong> Wait for the admin to verify your documents and payment details.</li>
+            <li><strong>Course Allotment:</strong> Once verified, your course will be allotted, and you can start your learning journey!</li>
+        </ol>
+
+        <p>If you encounter any issues, feel free to contact us at <strong>7080102008</strong> or visit <a href="https://softproindia.in">softproindia.in</a>.</p>
+
+        <p>We look forward to assisting you in your successful admission and educational journey at Biotech Park Lucknow!</p>
+
+        <p>Best regards,<br>
+        Rohit Kumar<br>
+        CTO Softpro India<br>
+        Biotech Park Lucknow</p>
+
+        <div class="footer">
+            <p>Note: This email contains sensitive information. Please do not share your login credentials with anyone.</p>
+        </div>
+    </div>
+</body>
+</html>

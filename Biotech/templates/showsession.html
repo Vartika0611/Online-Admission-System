@@ -1,0 +1,36 @@
+{% extends 'adminzone.html' %}
+{% block admin %}
+<div class=" mt-5 bg-primary" style="height: 50px; width: 200px; border:1px solid transparent; border-radius: 0px 30px 30px 0px;">
+    
+    <h4 class="" style="margin-top: 13px; margin-left: 10px; color:white;">View Session</h4>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12 table-responsive">
+            <table class="table table-bordered " id="example">
+                <thead>
+                    <tr class="text-center">
+                        <th class="text-white bg-primary">Srno</th>
+                        <th class="text-white bg-primary">Session</th>
+                        <th class="text-white bg-primary">Date</th>
+                        <th class="text-white bg-primary">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                 {% for i in sh %}
+                 <tr class="text-center">
+                    <td>{{forloop.counter}}</td>
+                    <td>{{i.session}}</td>
+                    <td>{{i.sessiondate}}</td>
+                    <td>
+                        <span><a href="{% url 'sessiondelete' i.id %}"><i class="fa-solid fa-trash" style="color: #e81717;"></i></a></span>&nbsp;&nbsp;
+                        <span><a href="{% url 'editsession' i.id %}"><i class="fa-solid fa-pen-to-square" style="color: #1fbd29;"></i></a></span>
+                    </td>
+                 </tr>
+                 {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

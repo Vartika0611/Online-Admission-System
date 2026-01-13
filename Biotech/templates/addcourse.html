@@ -1,0 +1,56 @@
+{% extends 'adminzone.html' %}
+{% block admin %}
+<div class=" mt-5 bg-primary" style="height: 50px; width: 200px; border:1px solid transparent; border-radius: 0px 30px 30px 0px;">
+    
+    <h4 class="" style="margin-top: 13px; margin-left: 10px; color:white;">Add Course</h4>
+</div>
+   <div class="container mt-5">
+    <div class="row">
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            {% for i in messages %}
+            <div class="alert alert-success">{{i}}</div>
+            {% endfor %}
+        </div>
+    </div>
+  <form method="post">
+    {% csrf_token %}
+    <div class="row bg-light border p-4 shadow m-2">
+        <div class="col-sm-6">
+            <p>Session</p>
+            <select name="course_session" id="" class="form-control border-dark rounded-0">
+                <option value="">--Select Session--</option>
+                {% for i in sh %}
+                <option value="{{i.session}}">{{i.session}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <p>Enter Course Name</p>
+            <input type="text" name="course_name" id="" class="form-control border-dark rounded-0">
+        </div>
+        <div class="col-sm-6 mt-3">
+            <p>Enter Course Durations</p>
+            <select name="course_duration" id="" class="form-control border-dark rounded-0">
+                <option value="">--Select Course Durastion--</option>
+                <option value="45 days">45 days</option>
+                <option value="3 month">3 month</option>
+                <option value="6 month">6 month</option>
+                <option value="1 year">1 year</option>
+                <option value="Complete Course For 1.5 Year">Complete Course For 1.5 Year</option>
+            </select>
+        </div>
+        <div class="col-sm-6 mt-3">
+            <p>Enter Your fees</p>
+            <input type="text" name="course_fees" id="" class="form-control border-dark rounded-0">
+
+            
+        </div>
+        <div class="col-sm-12 mt-5">
+            <input type="submit" class="btn btn-primary w-100 rounded-0">
+        </div>
+    </div>
+  </form>
+   </div>
+{% endblock %}
